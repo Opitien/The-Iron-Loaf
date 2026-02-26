@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { NewspaperImage } from "../components/NewspaperImage";
+import { useSEO } from "../../hooks/useSEO";
 
 const steps = [
   {
@@ -40,6 +41,13 @@ const steps = [
 ];
 
 export default function Process() {
+  useSEO({
+    title: 'Production - The Iron Loaf',
+    description: 'Discover the industrial bread-making process behind The Iron Loaf. From raw material acquisition to distribution, learn how our factory creates premium bread.',
+    keywords: 'bread production, manufacturing process, bakery production, industrial baking, flour milling, dough mixing',
+    ogImage: 'https://images.unsplash.com/photo-1545557903-ba7b68199378'
+  });
+
   return (
     <div className="p-6 md:p-12 max-w-5xl mx-auto">
       <header className="mb-16 text-center border-b-4 border-black border-double pb-8">

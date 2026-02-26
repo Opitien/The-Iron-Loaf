@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { NewspaperImage } from "../components/NewspaperImage";
+import { useSEO } from "../../hooks/useSEO";
 
 const products = [
   {
@@ -65,6 +66,13 @@ const products = [
 ];
 
 export default function Products() {
+  useSEO({
+    title: 'The Goods - The Iron Loaf',
+    description: 'Browse our product catalog. From The Iron Loaf to Miner\'s Brick and Factory Sour - premium bread for every need and budget. Quality assured since 1889.',
+    keywords: 'bread products, bakery catalog, classifieds, artisan bread, sourdough, hard tack, bakery goods',
+    ogImage: 'https://images.unsplash.com/photo-1691862329594-4eb279f01bc1'
+  });
+
   return (
     <div className="p-4 md:p-8 max-w-7xl mx-auto">
       <div className="mb-8 border-b-2 border-black pb-4 flex justify-between items-end">

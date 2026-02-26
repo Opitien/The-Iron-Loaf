@@ -2,8 +2,16 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { toast } from "sonner";
 import { NewspaperImage } from "../components/NewspaperImage";
+import { useSEO } from "../../hooks/useSEO";
 
 export default function Contact() {
+  useSEO({
+    title: 'Telegraph Us - The Iron Loaf',
+    description: 'Contact The Iron Loaf bakery. Get in touch for bulk orders, inquiries, or employment applications. Located at 19 Industrial Ave, Southwark, London.',
+    keywords: 'contact us, bakery contact, bulk order, employment, inquiry form, Telegraph Office',
+    ogImage: 'https://images.unsplash.com/photo-1561990975-6cfff5661206'
+  });
+
   const [formData, setFormData] = useState({
     name: "",
     subject: "",

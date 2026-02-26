@@ -2,8 +2,15 @@ import React from "react";
 import { Button } from "../components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription } from "../components/ui/card";
 import { useNavigate } from "react-router-dom";
+import { useSEO } from "../../hooks/useSEO";
 
 const NotFound = () => {
+  useSEO({
+    title: 'Page Not Found - The Iron Loaf',
+    description: 'The page you are looking for does not exist. Return to The Iron Loaf bakery website.',
+    keywords: '404, not found, error'
+  });
+
   const navigate = useNavigate();
 
   return (

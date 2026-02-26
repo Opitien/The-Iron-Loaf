@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
 import { NewspaperImage } from "../components/NewspaperImage";
+import { useSEO } from "../../hooks/useSEO";
 
 export default function Home() {
+  useSEO({
+    title: 'Front Page - The Iron Loaf',
+    description: 'The Iron Loaf: Bread for the working man. Forged in the fires of industry, kneaded by skilled hands. Premium industrial bakery serving London since 1889.',
+    keywords: 'industrial bakery, bread, working class, London, artisan bread, premium bread, factory bakery',
+    ogImage: 'https://images.unsplash.com/photo-1572125345941-a0687d65b989'
+  });
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 gap-0 border-b border-black">
       {/* Left Column (Main Story) */}

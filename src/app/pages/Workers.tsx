@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { NewspaperImage } from "../components/NewspaperImage";
+import { useSEO } from "../../hooks/useSEO";
 
 const workers = [
   {
@@ -37,6 +38,13 @@ const workers = [
 ];
 
 export default function Workers() {
+  useSEO({
+    title: 'Our Laborers - The Iron Loaf',
+    description: 'Meet the skilled workers behind The Iron Loaf. From master ovenmasters to dedicated apprentices - the hands that create our premium bread daily.',
+    keywords: 'bakery workers, team, factory workers, bakers, skilled labor, industrial bakery team',
+    ogImage: 'https://images.unsplash.com/photo-1635609974451-ae84cf68aafc'
+  });
+
   return (
     <div className="p-6 md:p-12 max-w-6xl mx-auto">
       <div className="text-center mb-12 border-b-4 double border-black pb-8">
