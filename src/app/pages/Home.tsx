@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { NewspaperImage } from "../components/NewspaperImage";
 
 export default function Home() {
