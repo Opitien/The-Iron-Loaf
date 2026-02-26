@@ -1,10 +1,11 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "./components/Layout";
 import Home from "./pages/Home";
 import Process from "./pages/Process";
 import Products from "./pages/Products";
 import Workers from "./pages/Workers";
 import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 export const router = createBrowserRouter([
   {
@@ -33,7 +34,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "*",
-        Component: Home, // Fallback
+        Component: NotFound, // Fallback
       }
     ],
   },

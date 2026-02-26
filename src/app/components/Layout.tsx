@@ -1,16 +1,17 @@
-import { Link, Outlet, useLocation } from "react-router";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import { cn } from "../../lib/utils";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Toaster } from "sonner";
 
-function NavLink({ to, children, className }: { to: string; children: React.ReactNode, className?: string }) {
+function NavLink({ to, children, className, onClick }: { to: string; children: React.ReactNode, className?: string, onClick?: () => void }) {
   const location = useLocation();
   const isActive = location.pathname === to;
   
   return (
     <Link 
       to={to} 
+      onClick={onClick}
       className={cn(
         "font-heading uppercase tracking-widest text-sm hover:underline decoration-1 underline-offset-4",
         isActive ? "underline font-bold" : "",
@@ -80,7 +81,7 @@ export function Layout() {
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <div className="md:hidden fixed inset-0 z-50 bg-[#D8D5CF] p-8 flex flex-col gap-8 text-center pt-32">
-          <button className="absolute top-8 right-8" onClick={() => setIsMenuOpen(false)}>
+          <button title="Close Menu" className="absolute top-8 right-8" onClick={() => setIsMenuOpen(false)}>
             <X size={32} />
           </button>
           <NavLink to="/" className="text-2xl" onClick={() => setIsMenuOpen(false)}>Front Page</NavLink>
