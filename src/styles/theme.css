@@ -1,0 +1,80 @@
+@theme {
+  --font-display: "Playfair Display", serif;
+  --font-body: "Cormorant Garamond", serif;
+  --font-heading: "Old Standard TT", serif;
+  --font-accent: "Special Elite", monospace;
+  --font-subhead: "Libre Baskerville", serif;
+
+  --color-paper: #D8D5CF;
+  --color-paper-dark: #B8B4A8;
+  --color-ink: #111111;
+  --color-charcoal: #2B2B2B;
+  --color-industrial: #6E6E6E;
+  --color-off-white: #F0EFEB;
+  --color-sepia: #EDEBD7;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-feature-settings: "liga" 1, "kern" 1;
+    background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-accent {
+  font-family: var(--font-accent);
+}
+
+.font-subhead {
+  font-family: var(--font-subhead);
+}
+
+/* Custom Scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-paper); 
+  border-left: 1px solid var(--color-ink);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--color-charcoal); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ink); 
+}
+
+/* Utility for newspaper lines */
+.separator-x {
+  border-bottom: 1px solid var(--color-ink);
+}
+.separator-y {
+  border-right: 1px solid var(--color-ink);
+}
+.separator-double-x {
+  border-bottom: 3px double var(--color-ink);
+}
